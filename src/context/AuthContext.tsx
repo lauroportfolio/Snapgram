@@ -8,8 +8,6 @@ import {
 } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-// PAREI EM 2:05:20 DO VÍDEO
-
 export const INITIAL_USER = {
     id: '',
     name: '',
@@ -65,8 +63,8 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         if(
-            // localStorage.getItem('cookieFallback') === null
-            localStorage.getItem('cookieFallback') === '[]'
+            localStorage.getItem('cookieFallback') === '[]' ||
+            localStorage.getItem('cookieFallback') === null
         ) navigate('/sign-in')
 
         checkAuthUser()
