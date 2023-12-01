@@ -3,9 +3,6 @@ import Loader from "@/components/shared/Loader";
 import { useGetCurrentUser } from "@/lib/react-query/queriesAndMutations";
 import { Models } from "appwrite";
 
-
-
-
 const Saved = () => {
   const { data: currentUser } = useGetCurrentUser();
 
@@ -43,7 +40,7 @@ const Saved = () => {
         </ul>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default Saved;
